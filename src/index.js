@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import SearchPokemon from './search-pokemon';
+import AllPokemon from "./all-pokemon";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SearchPokemon />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('search-pokemon')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AllPokemon />
+  </React.StrictMode>,
+  document.getElementById('all-pokemon')
 );
 
 // If you want to start measuring performance in your app, pass a function
