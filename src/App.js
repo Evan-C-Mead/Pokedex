@@ -30,31 +30,44 @@ const App = () => {
         getPokemon();
     }
 
+    const capFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     return (
         <div className="App">
-            <h1>Hello World</h1>
+            <h1>Enter Pokémon name or Pokédex #</h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <input type="text" onChange={handleChange} placeholder="Enter a Pokémon name"/>
+                    <input type="text" onChange={handleChange} placeholder="Search here..."/>
                 </label>
             </form>
             {pokeData.map((data) => {
                 return (
-                    <div className="container">
-                        <img/>
+                    <div className="container-fluid">
+                        <img src={data.sprites["front_default"]}/>
                         <div className="divTable">
-                            <div className="divTableBody"></div>
-                            <div className="divTableRow">
-                                <div className="divTableCell">Type</div>
-                                <div className="divTableCell">{pokeType.toUpperCase()}</div>
-                            </div>
-                            <div className="divTableRow">
-                                <div className="divTableCell">Height</div>
-                                <div className="divTableCell">{" "}{Math.round(data.height * 3.9)}"</div>
-                            </div>
-                            <div className="divTableRow">
-                                <div className="divTableCell">Weight</div>
-                                <div className="divTableCell">{" "}{Math.round(data.height / 4.3)} lbs</div>
+                            <div className="divTableBody">
+                                <div className="divTableRow">
+                                    <div className="divTableCell">Name</div>
+                                    <div className="divTableCell">{" "}{capFirstLetter(data.name)}</div>
+                                </div>
+                                <div className="divTableRow">
+                                    <div className="divTableCell">Pokédex #</div>
+                                    <div className="divTableCell">{" "}{data.id}</div>
+                                </div>
+                                <div className="divTableRow">
+                                    <div className="divTableCell">Type</div>
+                                    <div className="divTableCell">{capFirstLetter(pokeType)}</div>
+                                </div>
+                                <div className="divTableRow">
+                                    <div className="divTableCell">Height</div>
+                                    <div className="divTableCell">{" "}{Math.round(data.height * 3.9)}"</div>
+                                </div>
+                                <div className="divTableRow">
+                                    <div className="divTableCell">Weight</div>
+                                    <div className="divTableCell">{" "}{Math.round(data.weight / 4.3)} lbs</div>
+                                </div>
                             </div>
                         </div>
                     </div>
