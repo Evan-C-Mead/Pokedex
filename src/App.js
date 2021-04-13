@@ -39,34 +39,23 @@ const App = () => {
             <h1>Enter Pokémon name or Pokédex #</h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <input type="text" onChange={handleChange} placeholder="Search here..."/>
+                    <input type="text" onChange={handleChange} placeholder="Pokémon Name or #"/>
                 </label>
             </form>
             {pokeData.map((data) => {
                 return (
-                    <div className="container-fluid">
-                        <img src={data.sprites["front_default"]}/>
-                        <div className="divTable">
-                            <div className="divTableBody">
-                                <div className="divTableRow">
-                                    <div className="divTableCell">Name</div>
-                                    <div className="divTableCell">{" "}{capFirstLetter(data.name)}</div>
-                                </div>
-                                <div className="divTableRow">
-                                    <div className="divTableCell">Pokédex #</div>
-                                    <div className="divTableCell">{" "}{data.id}</div>
-                                </div>
-                                <div className="divTableRow">
-                                    <div className="divTableCell">Type</div>
-                                    <div className="divTableCell">{capFirstLetter(pokeType)}</div>
-                                </div>
-                                <div className="divTableRow">
-                                    <div className="divTableCell">Height</div>
-                                    <div className="divTableCell">{" "}{Math.round(data.height * 3.9)}"</div>
-                                </div>
-                                <div className="divTableRow">
-                                    <div className="divTableCell">Weight</div>
-                                    <div className="divTableCell">{" "}{Math.round(data.weight / 4.3)} lbs</div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-md-6 col-lg-4">
+                                <div className="card">
+                                    <img src={data.sprites["front_default"]}/>
+                                    <div className="card-body">
+                                        <h3 className="card-title">{" "}{capFirstLetter(data.name)}</h3>
+                                        <p className="card-text">Pokédex #{" "}{data.id}</p>
+                                        <p className="card-text">Type: {" "}{capFirstLetter(pokeType)}</p>
+                                        <p className="card-text">Height: {" "}{Math.round(data.height * 3.9)}"</p>
+                                        <p className="card-text">Weight: {" "}{Math.round(data.weight / 4.3)} lbs</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
