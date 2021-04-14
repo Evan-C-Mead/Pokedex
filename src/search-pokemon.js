@@ -53,7 +53,7 @@ const SearchPokemon = () => {
                                     <div className="row">
                                         <div className="col-12 col-md-6 col-lg-4" id="pkmn-srch">
                                             <div className="card"  id="pkmn">
-                                                <img src={data.sprites["front_default"]}/>
+                                                <img class="card-img-top" src={data.sprites["front_default"]} alt={capFirstLetter(data.name)}/>
                                                 <div className="card-body">
                                                     <h3 className="card-title">{" "}{capFirstLetter(data.name)}</h3>
                                                     <p className="card-text">Pokédex #{" "}{data.id}</p>
