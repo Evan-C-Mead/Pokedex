@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import SearchPokemon from "./search-pokemon";
 import axios from "axios";
-import './App.css';
+import '../../css/App.css';
 
 const AllPokemon = () => {
     const [pokemon, setPokemon] = useState([]);

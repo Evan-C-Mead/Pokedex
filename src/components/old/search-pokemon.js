@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import './App.css';
+import '../../css/App.css';
 
 const SearchPokemon = () => {
     const [pokemon, setPokemon] = useState("");

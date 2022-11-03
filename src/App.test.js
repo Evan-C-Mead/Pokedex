@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import SearchPokemon from './search-pokemon';
+import SearchPokemon from './components/old/search-pokemon';
 
 test('renders learn react link', () => {
   render(<SearchPokemon />);

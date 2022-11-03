@@ -1,35 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import SearchPokemon from './search-pokemon';
-import AllPokemon from "./all-pokemon";
-import NextGenPokemon from "./next-gen-pokemon";
+import './css/index-2.css';
+import SearchPokemon from './components/old/search-pokemon';
+import AllPokemon from "./components/old/all-pokemon";
+import NextGenPokemon from "./components/old/next-gen-pokemon";
 import reportWebVitals from './reportWebVitals';
+import {createRoot} from "react-dom/client";
+import App from "./App";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <SearchPokemon/>
-    </React.StrictMode>,
-    document.getElementById('search-pokemon')
-);
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <SearchPokemon/>
+//     </React.StrictMode>,
+//     document.getElementById('search-pokemon')
+// );
+//
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <AllPokemon/>
+//     </React.StrictMode>,
+//     document.getElementById('all-pokemon')
+// );
+//
+// ReactDOM.render(
+//     <React.StrictMode>
+//         <NextGenPokemon/>
+//     </React.StrictMode>,
+//     document.getElementById('next-gen-pokemon')
+// );
 
-ReactDOM.render(
-    <React.StrictMode>
-        <AllPokemon/>
-    </React.StrictMode>,
-    document.getElementById('all-pokemon')
-);
-
-ReactDOM.render(
-    <React.StrictMode>
-        <NextGenPokemon/>
-    </React.StrictMode>,
-    document.getElementById('next-gen-pokemon')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
-// test commit
+const container = document.getElementById("root")
+const root = createRoot(container)
+root.render(<App/>)
