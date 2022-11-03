@@ -75,5 +75,3 @@ const AllPokemon = () => {
 }
 
 export default AllPokemon;
-
-//comment for test commit after xcode delete
