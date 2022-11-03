@@ -9,8 +9,13 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+.navbar {
+    padding-right: .25rem;
+}
+
 .navbar-toggler {
     background-color: darkgoldenrod;
+    margin-bottom: .20rem;
 }
 
 nav, li {
