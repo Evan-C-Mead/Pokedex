@@ -4,8 +4,8 @@ export default function Info() {
     return (
         <div className="container-cards container-fluid">
             <div className="card">
-                <div className="card-header text-center" >
-                    <h4 className="card-header-text">What are Pokémon?</h4>
+                <div className="card-header text-center lead">
+                    <p className="d-inline lead">What are Pokémon?</p>
                 </div>
                 <div className="card-body">
                     <blockquote className="blockquote mb-0">
