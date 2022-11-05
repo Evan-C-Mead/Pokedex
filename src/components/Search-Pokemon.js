@@ -37,12 +37,12 @@ export default function SearchPokemon() {
         <div className="container-cards container-fluid">
             <div className="card">
                 <div className="card-header text-center lead">
-                    <p className="d-inline lead">Enter Pokémon Name or Pokédex #</p>
+                    <p className="d-inline lead">Search a Pokémon by name or Pokédex #</p>
                 </div>
                 <div className="card-body d-flex justify-content-center">
                     <form onSubmit={handleSubmit}>
                         <label>
-                            <input type="text" onChange={handleChange} placeholder="Pokémon Name or #"/>
+                            <input className="text-center" type="text" onChange={handleChange} placeholder="Pokémon name or #"/>
                         </label>
                     </form>
                     {pokeData.map((data) => {
