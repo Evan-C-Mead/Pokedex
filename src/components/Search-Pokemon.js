@@ -29,7 +29,7 @@ export default function SearchPokemon() {
         getPokemon();
     }
 
-    const capFirstLetter = (string) => {
+    function capFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
@@ -50,18 +50,17 @@ export default function SearchPokemon() {
                     return (
                         <div className="container-fluid">
                             <div className="row alignn-items-center m-0">
-                                {/*<div className="col-12 col-md-6 col-lg-4 mt-0 pt-0" id="pkmn-srch">*/}
-                                <div className="col-sm mt-0 pt-0" id="pkmn-srch">
+                                <div className="col-12 col-md-6 col-lg-4 mt-0 pt-0" id="pkmn-srch">
                                     <div className="card text-center" id="pkmn">
                                         <img className="card-img-top" src={data.sprites["front_default"]}
                                              alt={capFirstLetter(data.name)}/>
                                         <div className="card-body pt-0">
                                             <hr/>
-                                            <h3 className="card-title m-0">{" "}{capFirstLetter(data.name)}</h3>
+                                            <h3 className="card-title m-0">{capFirstLetter(data.name)}</h3>
                                             <p className="card-text m-0">Pokédex #{" "}{data.id}</p>
                                             <p className="card-text m-0">Type: {" "}{capFirstLetter(pokeType)}</p>
                                             <p className="card-text m-0">Height: {" "}{Math.round(data.height * 3.9)}"</p>
-                                            <p className="card-text m-0">Weight: {" "}{Math.round(data.weight / 4.3)} lbs</p>
+                                            <p className="card-text m-0">Weight: {" "}{Math.round(data.weight / 4.3)}lbs</p>
                                         </div>
                                     </div>
                                 </div>
